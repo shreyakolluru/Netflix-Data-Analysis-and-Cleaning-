@@ -1,7 +1,7 @@
 import pandas as pd 
 df = pd.read_csv('netflix_titles.csv')
 import sqlalchemy as sal
-engine = sal.create_engine('mssql://ANKIT\SQLEXPRESS/master?driver=ODBC+DRIVER+17+FOR+SQL+SERVER')
+engine = sal.create_engine('mssql://Shreya\SQLEXPRESS/master?driver=ODBC+DRIVER+17+FOR+SQL+SERVER')
 conn=engine.connect()
 
 df.to_sql('netflix_raw', con=conn , index=False, if_exists = 'append')
